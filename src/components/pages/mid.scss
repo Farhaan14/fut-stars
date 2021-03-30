@@ -1,0 +1,264 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Saira Semi Condensed', sans-serif;
+    font-weight: 400;
+    background-color: #111;
+  &:after{
+    
+    font-size:1rem;
+    color:#aaa;
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    z-index:2;
+  }
+}
+
+
+
+.page{
+    background-color: #111;
+}
+
+.page-heading{
+    position: absolute;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 15vw;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    color: whitesmoke;
+    opacity: 40%;
+}
+
+
+
+.player-container{
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+}
+
+// Wrapper | For this page - !!ignore
+// for centered element
+.wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height:80vh;
+    min-height: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
+
+/*
+  *** fut-player-card styles ***
+*/
+
+// Variables
+$gold:#e9cc74;
+$black-gradient-to-bottom: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.90) 90%);
+$black-gradient-to-top: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.90) 90%);
+
+// fut-player-card
+.fut-player-card{
+    position: relative;
+    width:300px;
+    height:485px;
+    background-image: url('../images/card-bg-2.png');
+    // background-image: url(https://www.pngitem.com/pimgs/m/219-2198207_fut-19-card-creator-hd-png-download.png);
+    // background-image: url(https://p7.hiclipart.com/preview/878/709/149/fifa-18-fc-barcelona-football-player-electronic-arts-ea-sports-fifa-card.jpg);
+    // background-image: url(https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-21/global_assets/common/section_backgrounds/fifa21-section-bg-newsletter-signup-16x9-xl.png.adapt.320w.png);
+    background-position: center center;
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    padding:4rem 0;
+    z-index: 2;
+    transition: 200ms ease-in;
+    .player-card-top{
+        position: relative;
+        display: flex;
+        color:$gold;
+        text-decoration: none;
+        padding: 0 1.5rem;
+        .player-master-info{
+            position: absolute;
+            line-height: 2.2rem;
+            font-weight: 300;
+            padding: 1.5rem 0;
+            text-transform: uppercase;
+            .player-rating{
+                font-size:2rem;
+            }
+            .player-position{
+                font-size: 1.4rem;
+            }
+            .player-nation{
+                display: block;
+                width:2rem;
+                height:25px;
+                margin: 0.3rem 0;
+                img{
+                    width:100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            .player-club{
+                display: block;
+                width:2.1rem;
+                height:40px;
+                img{
+                    width:100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+        .player-picture{
+            width:200px;
+            height:200px;
+            margin: 0 auto;
+            overflow: hidden;
+            img{
+                width:100%;
+                height:100%;
+                object-fit: contain;
+                position: relative;
+                right: -1.5rem;
+                bottom: 0;
+            }
+            .player-extra{
+                position: absolute;
+                right:0;
+                bottom: -0.5rem;
+                overflow: hidden;
+                font-size:1rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                width:100%;
+                height:2rem;
+                padding:0 1.5rem;
+                text-align: right;
+                background:none;
+                span{
+                  margin-left: 0.6rem;
+                  text-shadow:2px 2px #333;
+                }
+            }
+        }
+    }
+    .player-card-bottom{
+        position: relative;
+        .player-info{
+            display: block;
+            padding:0.5rem 0;
+            color:$gold;
+            text-decoration: none;
+            width:100%;
+            margin:0 auto;
+            height: auto;
+            position: relative;
+            z-index: 2;
+            
+            .player-name{
+                width:100%;
+                display: block;
+                text-align: center;
+                font-size:1.6rem;
+                text-transform: uppercase;
+                border-bottom: 2px solid rgba($gold, 0.1);
+                padding-bottom: 0.3rem;
+                overflow: hidden;
+                span{
+                    display: block;
+                    text-shadow:2px 2px #111;
+                }
+            }
+            .player-features{
+                margin: 0.5rem auto;
+                display: flex;
+                justify-content: center;
+                .player-features-col{
+                    border-right: 2px solid rgba($gold, 0.1);
+                    
+                    padding-right: 1rem;
+                    padding-left: 1rem;
+                    span{
+                        display: flex;
+                        font-size: 1.2rem;
+                        text-transform: uppercase;
+                        .player-feature-value{
+                            margin-right: 0.3rem;
+                            font-weight: 700;
+                        }
+                        .player-feature-title{
+                            font-weight: 300;
+                        }
+                    }
+                }
+                .player-features-col:last-child{
+                    border:0;
+                }
+            }
+        }
+    }
+}
+
+// .main-player-cont{
+//     transform: scale(0.75);
+// }
+
+.player-container{
+    transform: scale(0.83);
+    // opacity: 100%;
+}
+
+.player-container:hover{
+    .main-player-cont:not(:hover){
+        opacity: 50%;
+    }
+    .main-player-cont:hover{
+        transform: scale(1.1);
+        transition: 0.4s ease;
+        text-decoration: none;
+        opacity: 100%;
+    }
+}
+
+
+
+// .player-container:hover{
+//     .main-player-cont:not(:hover){
+//         opacity: 50%;
+//     }
+//     .main-player-cont:hover{
+//         // background-color: aqua;
+//         transform: scale(1.1);
+//         transition: 0.4s ease;
+//         text-decoration: none;
+//         opacity: 100%;
+//     }
+    
+// }
+
+// .main-player-cont:hover{
+//     // background-color: aqua;
+//     transform: scale(1.1);
+//     transition: 0.4s ease;
+//     text-decoration: none;
+//     opacity: 100%;
+// }
+
+a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+}

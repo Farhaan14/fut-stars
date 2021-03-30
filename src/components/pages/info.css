@@ -1,0 +1,364 @@
+/* font-family: 'Bebas Neue', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'PT Sans', sans-serif; 
+font-family: 'Work Sans', sans-serif;*/
+
+.info-page{
+    /* background-color: rgb(134, 21, 21); */
+    background-color: #111;
+    z-index: 1;
+    }
+    
+    .main-info{
+        margin:auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 97%;
+        padding: 20px;
+        background-color: #222;
+        
+        
+    }
+    
+    .heading{
+        margin:auto;
+        margin-top: 2%;
+        width: 95%;
+        height: 75%;
+        /* border: 3px solid white; */
+        padding: 20px;
+        background-color: black;
+        display: grid;
+        grid-gap: 1rem;
+        /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+
+    .column-cont-2{
+      grid-row-start: 1;
+      grid-row-end: 2;
+      justify-content: baseline;
+    }
+
+    .column-cont-1{
+      /* justify-content:right; */
+      display:grid;
+      grid-gap: 1rem;
+      /* grid-template-columns: 1fr; */
+      grid-template-rows: 1fr 1fr 0.5fr;
+      align-items: center;
+      justify-items: end;
+      grid-row:1/3;
+      grid-column: 2/3;
+    }
+
+    .subgrid-1{
+      grid-row: 1/3;
+      justify-items: space-between;
+      /* grid-column: 1/3; */
+
+    }
+
+    .subgrid-2{
+      /* margin: auto; */
+      margin-right: 1rem;
+    }
+
+    .image.player{
+      height: 16vw;
+    }
+
+    .image.flag.club, .image.flag.country{
+      height: 5vw;
+      padding: 0.5vw;
+      /* justify-content: center; */
+    }
+
+    .name{
+      color: whitesmoke;
+      font-size: 2.8vw;
+
+
+      /* width: 65%; */
+      
+    }
+
+    .name-1{
+      /* position: absolute; */
+      font-weight: 300;
+      /* top: calc(50% - 9vw); */
+      
+    }
+
+    .name-2{
+      /* position: absolute; */
+      font-family: 'Bebas Neue', cursive;
+      font-size: 8vw;
+      letter-spacing: 0.5vw;
+      /* top: calc(50% - 6vw); */
+    }
+
+    .heading{
+      /* position: relative; */
+      /* min-height: 35vw;  */
+      background: url('../images/bg5.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      overflow: hidden;
+    }
+
+
+    .flag{
+
+      /* position: absolute; */
+      /* right: 1.2vw; */
+      height: 15%;
+      width: auto;
+      /* top: 20vw; */
+
+    }
+
+
+    .details{
+      /* position: absolute; */
+      font-weight: 300;
+      /* top: calc(50% + 3vw); */
+      font-size: 1.5vw;
+    }
+
+    .league{
+      /* top: calc(50% + 5vw); */
+      font-weight: bold;
+    }
+
+    .playstyle{
+      /* top: calc(50% + 7vw); */
+      font-family: 'Bebas Neue', cursive;
+      font-size: 2.5vw;
+      letter-spacing: 0.1vw;
+      font-weight: 500;
+      /* padding-bottom: 2vw; */
+    }
+
+    .seperator{
+      color: #ff0043;
+      font-weight: 900;
+    }
+
+    @media (max-width: 645px) {
+      .heading{
+        display: block;
+        text-align: center;
+      }
+      .column-cont-1{
+        justify-items: end;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        margin: auto;
+        grid-gap: 0 1rem;
+        align-items: center;
+      }
+      .subgrid-2{
+        /* justify-items: start; */
+        margin-right: auto;
+      }
+      .image.flag.club, .image.flag.country{
+        align-content: center;
+        margin: auto 0;
+        display: block;
+        width: 13vw;
+        height: auto;
+        padding-top: 3vw;
+      /* justify-content: center; */
+      }
+      .column-cont{
+        margin: auto;
+        padding: 2vw 0;
+      }
+
+      .name{
+        font-size: 4vw;
+      }
+
+      .name-2{
+        font-size: 10vw;
+      }
+
+      .image.player{
+        height: 25vw;
+      }
+
+      .details{
+        font-size: 3vw;
+      }
+
+    }
+
+    .player_card{
+        margin:auto;
+        width: 95%;
+        padding: 20px;
+        background-color: black;
+
+        
+    }
+    #player_name{
+    
+        font-family: 'Montserrat', sans-serif;
+        font-size: 60px;
+        font-weight: 900;
+        display: block;
+        text-align: left;
+    }
+      .row-stats{
+        margin:auto;
+        width: 95%;
+        height: 75%;
+        padding: 20px;
+        background-color: black;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+
+      @media (min-width: 600px) {
+        .row-stats { grid-template-columns: repeat(2, 1fr); }
+        /* .heading { grid-template-columns: repeat(2, 1fr); } */
+      }
+
+      @media (min-width: 900px) {
+        .row-stats { grid-template-columns: repeat(3, 1fr); }
+        /* .heading { grid-template-columns: repeat(2, 1fr); } */
+      }
+
+      @media (min-width: 1200px) {
+        .row-stats { grid-template-columns: repeat(4, 1fr); }
+        /* .heading { grid-template-columns: repeat(2, 1fr); } */
+      }
+
+    .stat_name{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        font-weight: 900;
+        display: block;
+        text-align: left;
+        color: white;
+        border-bottom: 3px solid #ff0043;
+        padding-bottom: 5px;
+    }
+    .stats {
+        text-align:end;
+        padding-top: 2px; 
+        padding-bottom: 2px; 
+        color: black;
+        font-weight: bold; 
+      }
+    .ind_stat_container{
+        width: 100%;
+        color: white;
+        padding-bottom: 5px;
+    }
+
+    .stat-content{
+      padding: 2px 5px;
+      
+      background-color: #ff0043;
+      color: black;
+      text-align: center;
+    }
+
+    
+
+    .player_card{
+      min-height: 10vw;
+    }
+
+     .overall{
+      width: 100%;
+      height: auto;
+    }
+    
+    .attr{
+      font-size: 1.5vw;
+    } 
+
+    .column{
+      float: left;
+      width: 25%;
+      padding: 0 10px;
+    }
+
+    .row {
+      margin: 0 -5px;
+    }
+    
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .card{
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      padding: 16px;
+      text-align: center;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+
+
+
+    .fa-star {
+      padding-top: 20%;
+      font-size: 2vw;
+    }
+
+    .workrate {
+      padding-top: 20%;
+      font-size: 1.8vw;
+    }
+
+    .star-title {
+      padding-top: 19%;
+    }
+    
+    @media screen and (max-width: 645px) {
+      .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+      }
+      .fa-star {
+        padding-top: 20%;
+        font-size: 6vw;
+      }
+  
+      .workrate {
+        padding-top: 20%;
+        font-size: 5.4vw;
+      }
+
+      .attr{
+        font-size: 4.5vw;
+      } 
+    }
+
+
+
+
+    
+    
+  
+
+     
+
+
+
+
+
+
+

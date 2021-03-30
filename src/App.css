@@ -1,0 +1,260 @@
+/* font-family: 'Bebas Neue', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'PT Sans', sans-serif; 
+font-family: 'Work Sans', sans-serif;*/
+
+:root{
+    --tertiary: #ff0043;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+h1{
+    margin: 0;
+    width: 70%;
+    padding: 1vw;
+    position: absolute;
+    top: 25vw;
+    left: 50%;
+    /* -ms-transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%);
+    font-family: 'Work Sans', sans-serif; 
+    text-transform: uppercase;
+    text-align:center;
+    font-size: 3vw;
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+h2{
+    margin: 0;
+    width: 70%;
+    padding: 1vw;
+    position: absolute;
+    top: 30vw;
+    left: 50%;
+    /* -ms-transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat', sans-serif;
+    text-align:center;
+    font-size: 1.7vw;
+    /* color: #090808;
+    background-color: rgba(253, 253, 253, 0.6); */
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.home{
+    /* background-color: chartreuse;
+     */
+    background-image: url(./components/images/bg4.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    /* padding: 24%; */
+    height: 50vw;
+}
+
+@media screen and (max-width: 855px){
+    h1{
+        top: 30vw;
+    }
+
+    h2{
+        top: 35vw;
+    }
+}
+
+@media screen and (max-width: 650px){
+    h1{
+        top: 35vw;
+    }
+
+    h2{
+        top: 40vw;
+    }
+}
+
+@media screen and (max-width: 500px){
+    h1{
+        top: 38vw;
+    }
+
+    h2{
+        top: 43vw;
+    }
+}
+
+@media screen and (max-width: 400px){
+    h1{
+        top: 43vw;
+    }
+
+    h2{
+        top: 48vw;
+    }
+}
+
+@media screen and (max-width: 350px){
+    h1{
+        top: 48vw;
+    }
+
+    h2{
+        top: 53vw;
+    }
+}
+
+
+.logos{
+    /* display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 100px; */
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    overflow-y: hidden;
+    justify-content:center;
+    background-color: #090808;
+    width: 100%;
+}
+
+
+
+
+.rotate {
+    animation: rotation 8s infinite linear;
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+.footer-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* min-height: 100vh; */
+    flex-direction: column;
+    background: #ede7f6;
+    
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: #111;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: wrap;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.sec{
+    margin-right: 30px;
+}
+
+.aboutus{
+    width: 50%;
+}
+
+.contact{
+    width: 20%;
+}
+
+.footer-h3{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+    height: 5vh;
+}
+
+.footer-h3:before{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--tertiary);
+}
+
+.footer-p{
+    color: #999;
+}
+
+.sci{
+    margin-top: 20px;
+    display: flex;
+}
+
+.sci li{
+    list-style: none;
+}
+
+.sci li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.sci li a:hover{
+    background: var(--tertiary);
+}
+
+.sci li a .fab{
+    color: #fff;
+    font-size: 20px;
+}
+
+.website-info{
+    margin: auto;
+    padding: 2vw;
+    text-align: center;
+    background-color: #090808;
+    color: white;
+    width: 80%;
+    font-size: 1.2vw;
+}
+
+.p-bg{
+    background-color: #090808;
+}
+
+.home-img{
+    width: 12vw;
+    height: auto;
+    padding: 2vw;
+}
+
