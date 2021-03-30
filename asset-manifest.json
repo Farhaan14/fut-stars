@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/fut-stars/static/css/main.1f68afc6.chunk.css",
+    "main.js": "/fut-stars/static/js/main.8f9b8a7c.chunk.js",
+    "main.js.map": "/fut-stars/static/js/main.8f9b8a7c.chunk.js.map",
+    "runtime-main.js": "/fut-stars/static/js/runtime-main.fdff7dea.js",
+    "runtime-main.js.map": "/fut-stars/static/js/runtime-main.fdff7dea.js.map",
+    "static/js/2.b6299ef7.chunk.js": "/fut-stars/static/js/2.b6299ef7.chunk.js",
+    "static/js/2.b6299ef7.chunk.js.map": "/fut-stars/static/js/2.b6299ef7.chunk.js.map",
+    "index.html": "/fut-stars/index.html",
+    "static/css/main.1f68afc6.chunk.css.map": "/fut-stars/static/css/main.1f68afc6.chunk.css.map",
+    "static/js/2.b6299ef7.chunk.js.LICENSE.txt": "/fut-stars/static/js/2.b6299ef7.chunk.js.LICENSE.txt",
+    "static/media/ball.1dd34724.png": "/fut-stars/static/media/ball.1dd34724.png",
+    "static/media/barca.769ceccd.png": "/fut-stars/static/media/barca.769ceccd.png",
+    "static/media/App.css": "/fut-stars/static/media/bg4.a9658b5e.jpg",
+    "static/media/info.css": "/fut-stars/static/media/bg5.fdf60117.jpg",
+    "static/media/mid.scss": "/fut-stars/static/media/card-bg-2.cdbaae15.png",
+    "static/media/city.eb2db2ed.png": "/fut-stars/static/media/city.eb2db2ed.png",
+    "static/media/icon3.24db648f.png": "/fut-stars/static/media/icon3.24db648f.png",
+    "static/media/psg.50361638.png": "/fut-stars/static/media/psg.50361638.png",
+    "static/media/united.5f327d93.png": "/fut-stars/static/media/united.5f327d93.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fdff7dea.js",
+    "static/js/2.b6299ef7.chunk.js",
+    "static/css/main.1f68afc6.chunk.css",
+    "static/js/main.8f9b8a7c.chunk.js"
+  ]
+}
