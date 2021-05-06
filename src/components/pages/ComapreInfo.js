@@ -4,41 +4,226 @@ import './compare.css';
 import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
 
-const displayChart = () =>{
-    var x = document.getElementById("chart-select").value;
-    var canvas = document.createElement('canvas');
-    canvas.id = x;
-    document.getElementById('chart-container').appendChild(canvas)
-}
 
 class CompareInfo extends React.Component{
-    componentDidMount(){
 
+    componentDidUpdate(){
+        var type_chart = 'radar';
+        if(localStorage.getItem('selected-chart') == 'shots'){
+            var labels = [
+                'Positioning',
+                'Finishing',
+                'Shot Power',
+                'Long Shots',
+                'Volleys',
+                'Penalties'
+            ];
+
+            var data1 = [
+                Footballers[localStorage.getItem("id1")].positioning,
+                Footballers[localStorage.getItem("id1")].finishing,
+                Footballers[localStorage.getItem("id1")].shot_power,
+                Footballers[localStorage.getItem("id1")].long_shots,
+                Footballers[localStorage.getItem("id1")].volleys,
+                Footballers[localStorage.getItem("id1")].penalties
+            ];
+
+            var data2 = [
+                Footballers[localStorage.getItem("id2")].positioning,
+                Footballers[localStorage.getItem("id2")].finishing,
+                Footballers[localStorage.getItem("id2")].shot_power,
+                Footballers[localStorage.getItem("id2")].long_shots,
+                Footballers[localStorage.getItem("id2")].volleys,
+                Footballers[localStorage.getItem("id2")].penalties
+            ];
+
+            var caption = 'Shots';
+        }
+
+        else if(localStorage.getItem('selected-chart') == 'passing'){
+            var labels = [
+                'Vision',
+                'Crossing',
+                'Free Kick',
+                'Short Pass',
+                'Long Pass',
+                'Curve'
+            ];
+
+            var data1 = [
+                Footballers[localStorage.getItem("id1")].vision,
+                Footballers[localStorage.getItem("id1")].crossing,
+                Footballers[localStorage.getItem("id1")].freekick,
+                Footballers[localStorage.getItem("id1")].short_pass,
+                Footballers[localStorage.getItem("id1")].long_pass,
+                Footballers[localStorage.getItem("id1")].curve
+            ];
+
+            var data2 = [
+                Footballers[localStorage.getItem("id2")].vision,
+                Footballers[localStorage.getItem("id2")].crossing,
+                Footballers[localStorage.getItem("id2")].freekick,
+                Footballers[localStorage.getItem("id2")].short_pass,
+                Footballers[localStorage.getItem("id2")].long_pass,
+                Footballers[localStorage.getItem("id2")].curve
+            ];
+
+            var caption = 'Passing';
+        }
+
+        else if(localStorage.getItem('selected-chart') == 'dribbles'){
+            var labels = [
+                'Agility',
+                'Balance',
+                'Reactions',
+                'Ball Control',
+                'Dribbling',
+                'Composure'
+            ];
+
+            var data1 = [
+                Footballers[localStorage.getItem("id1")].agility,
+                Footballers[localStorage.getItem("id1")].balance,
+                Footballers[localStorage.getItem("id1")].reactions,
+                Footballers[localStorage.getItem("id1")].ball_control,
+                Footballers[localStorage.getItem("id1")].dribbling,
+                Footballers[localStorage.getItem("id1")].composure
+            ];
+
+            var data2 = [
+                Footballers[localStorage.getItem("id2")].agility,
+                Footballers[localStorage.getItem("id2")].balance,
+                Footballers[localStorage.getItem("id2")].reactions,
+                Footballers[localStorage.getItem("id2")].ball_control,
+                Footballers[localStorage.getItem("id2")].dribbling,
+                Footballers[localStorage.getItem("id2")].composure
+            ];
+
+            var caption = 'Dribbles';
+        }
+
+        else if(localStorage.getItem('selected-chart') == 'defending'){
+            var labels = [
+                'Interceptions',
+                'Heading',
+                'Awarness',
+                'Stand Tackle',
+                'Slide Tackle'
+            ];
+
+            var data1 = [
+                Footballers[localStorage.getItem("id1")].interceptions,
+                Footballers[localStorage.getItem("id1")].heading,
+                Footballers[localStorage.getItem("id1")].awareness,
+                Footballers[localStorage.getItem("id1")].stand_tackle,
+                Footballers[localStorage.getItem("id1")].slide_tackle
+            ];
+
+            var data2 = [
+                Footballers[localStorage.getItem("id2")].interceptions,
+                Footballers[localStorage.getItem("id2")].heading,
+                Footballers[localStorage.getItem("id2")].awareness,
+                Footballers[localStorage.getItem("id2")].stand_tackle,
+                Footballers[localStorage.getItem("id2")].slide_tackle
+            ];
+
+            var caption = 'Defending';
+        }
+
+        else if(localStorage.getItem('selected-chart') == 'physical'){
+            var labels = [
+                'Jumping',
+                'Stamina',
+                'Strength',
+                'Aggresion'
+            ];
+
+            var data1 = [
+                Footballers[localStorage.getItem("id1")].jumping,
+                Footballers[localStorage.getItem("id1")].stamina,
+                Footballers[localStorage.getItem("id1")].strength,
+                Footballers[localStorage.getItem("id1")].aggression
+            ];
+
+            var data2 = [
+                Footballers[localStorage.getItem("id2")].jumping,
+                Footballers[localStorage.getItem("id2")].stamina,
+                Footballers[localStorage.getItem("id2")].strength,
+                Footballers[localStorage.getItem("id2")].aggression
+            ];
+
+            var caption = 'Physical';
+        }
+
+        else if(localStorage.getItem('selected-chart') == 'goalkeeper'){
+            var labels = [
+                'Diving',
+                'Handling',
+                'Kicking',
+                'Reflexes',
+                'Speed',
+                'Positioning'
+            ];
+
+            var data1 = [
+                Footballers[localStorage.getItem("id1")].diving,
+                Footballers[localStorage.getItem("id1")].handling,
+                Footballers[localStorage.getItem("id1")].kicking,
+                Footballers[localStorage.getItem("id1")].reflexes,
+                Footballers[localStorage.getItem("id1")].spd,
+                Footballers[localStorage.getItem("id1")].pos
+            ];
+
+            var data2 = [
+                Footballers[localStorage.getItem("id2")].diving,
+                Footballers[localStorage.getItem("id2")].handling,
+                Footballers[localStorage.getItem("id2")].kicking,
+                Footballers[localStorage.getItem("id2")].reflexes,
+                Footballers[localStorage.getItem("id2")].spd,
+                Footballers[localStorage.getItem("id2")].pos
+            ];
+
+            var caption = 'GK';
+        }
+
+        else{
+            type_chart = 'bar';
+
+            var labels = [
+                'Acceleration',
+                'Sprint Speed'
+            ];
         
+            var data1 = [
+                Footballers[localStorage.getItem("id1")].acceleration,
+                Footballers[localStorage.getItem("id1")].sprint_speed
+            ];
+        
+            var data2 = [
+                Footballers[localStorage.getItem("id2")].acceleration,
+                Footballers[localStorage.getItem("id2")].sprint_speed
+            ];
+        
+            var caption = 'Pace';
 
-        //SHOTS
-        var ctx = document.getElementById('shots');
-        new Chart(ctx, {
-            type: 'radar',
+        }
+
+        Chart.defaults.backgroundColor = '#fff';
+        Chart.defaults.borderColor = 'rgba(255, 255, 255, 0.2)';
+        Chart.defaults.color = '#fff';
+        Chart.defaults.font.size = 12;
+        Chart.defaults.backdropColor = 'rgba(0, 0, 0, 0)';
+        Chart.defaults.elements.bar.borderWidth = 3;
+
+        //CHART
+        var chart = document.getElementById(localStorage.getItem('selected-chart'));
+        new Chart(chart, {
+            type: type_chart,
             data: {
-                labels: [
-                    'Positioning',
-                    'Finishing',
-                    'Shot Power',
-                    'Long Shots',
-                    'Volleys',
-                    'Penalties'
-                ],
+                labels: labels,
                 datasets: [{
                     label: Footballers[localStorage.getItem("id1")].name,
-                    data: [
-                        Footballers[localStorage.getItem("id1")].positioning,
-                        Footballers[localStorage.getItem("id1")].finishing,
-                        Footballers[localStorage.getItem("id1")].shot_power,
-                        Footballers[localStorage.getItem("id1")].long_shots,
-                        Footballers[localStorage.getItem("id1")].volleys,
-                        Footballers[localStorage.getItem("id1")].penalties
-                    ],
+                    data: data1,
                     fill: true,
                     backgroundColor: 'rgba(255, 99, 132, 0.2)',
                     borderColor: 'rgb(255, 99, 132)',
@@ -48,14 +233,7 @@ class CompareInfo extends React.Component{
                     pointHoverBorderColor: 'rgb(255, 99, 132)'
                 }, {
                     label: Footballers[localStorage.getItem("id2")].name,
-                    data: [
-                        Footballers[localStorage.getItem("id2")].positioning,
-                        Footballers[localStorage.getItem("id2")].finishing,
-                        Footballers[localStorage.getItem("id2")].shot_power,
-                        Footballers[localStorage.getItem("id2")].long_shots,
-                        Footballers[localStorage.getItem("id2")].volleys,
-                        Footballers[localStorage.getItem("id2")].penalties
-                    ],
+                    data: data2,
                     fill: true,
                     backgroundColor: 'rgba(54, 162, 235, 0.2)',
                     borderColor: 'rgb(54, 162, 235)',
@@ -66,15 +244,53 @@ class CompareInfo extends React.Component{
                 }]
             },
             options: {
+                scale: {
+                    ticks: {
+                        maxTicksLimit: 5
+                    }
+                },
+                
                 plugins: {
                     title: {
                         display: true,
-                        text: 'Shots'
+                        text: caption,
+                        color: '#fff',
+                        font: {
+                            size: 50
+                        }
+                    },
+                    legend: {
+                        labels: {
+                            color: '#fff',
+                            font: {
+                                size: 15
+                            }
+                        }
                     }
                 }
             }
         });
     }
+    
+
+    constructor(props) {
+        super(props);
+        this.state = {value: ''};
+        this.handleChange = this.handleChange.bind(this);
+      }
+    
+      handleChange(event) {
+        this.setState({value: event.target.value});
+        var x = document.getElementById("chart-select").value;
+        var canvas = document.createElement('canvas');
+        canvas.id = x;
+        localStorage.setItem('selected-chart', x);
+        var parent = document.getElementById('chart-container');
+        while (parent.firstChild) {
+            parent.removeChild(parent.firstChild);
+        }
+        parent.appendChild(canvas);
+      }
     
     render(){
     return(
@@ -114,10 +330,18 @@ class CompareInfo extends React.Component{
                 </div>
 
                 <div className="compare-chart">
-                    <select id="chart-select" onChange={displayChart()}>
-                        <option value="pace">Pace</option>
-                        <option value="shots">Shots</option>
-                    </select>
+                    <div className="custom-select">
+                        <select id="chart-select" value={this.state.value} onChange={this.handleChange}>
+                            <option disabled selected value=""> -- select an option -- </option>
+                            <option className="option" value="pace">Pace</option>
+                            <option className="option" value="shots">Shots</option>
+                            <option className="option" value="passing">Passing</option>
+                            <option className="option" value="dribbles">Dribbles</option>
+                            <option className="option" value="defending">Defending</option>
+                            <option className="option" value="physical">Physical</option>
+                            <option className="option" value="goalkeeper">GK</option>
+                        </select>
+                    </div>
                     <div className="chart-cont" id="chart-container">
                     </div>
                 </div>

@@ -63,3 +63,29 @@
     width: 40vw;
     margin: auto;
 }
+
+.custom-select{
+    /* position: relative; */
+    display: grid;
+    place-items: center;
+
+}
+
+.compare-chart{
+    position: relative;
+}
+
+#chart-select{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    padding: 1em 1.5em;
+    color: white;
+    background-color: #111;
+    outline: none;
+    border: none;
+    width: 95%;
+}
+option:hover {
+    background-color: #488f8f; 
+  } 
