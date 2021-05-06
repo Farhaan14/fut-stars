@@ -4,22 +4,67 @@
     box-sizing: border-box;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2); 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ff0043; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #222; 
+  }
+
 .player-container-compare {
     margin: auto;
     width: 90%;
-    height: 80vh;
-    background-color: red;
-    overflow-y: scroll;
+    height: 75vh;
+    background-color: #222;
+    overflow-y:auto;
+    overflow-x: hidden;
 }
 
 .player-1{
-    background-color: aqua;
+    background-color: #222;
+    border: none;
+    outline: none;
+    font-size: 1.5vw;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: whitesmoke;
 }
 
-.player-2{
-    background-color: blueviolet;
-    float: right;
+.player-1:hover{
+    background: #ff0043;
 }
+
+
+.player-2{
+    background-color: #222;
+    float: right;
+    border: none;
+    outline: none;
+    font-size: 1.5vw;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: whitesmoke;
+}
+
+.player-2:hover{
+    background: #ff0043;
+}
+
 
 .players-info{
     margin: auto;
@@ -28,6 +73,26 @@
     margin-bottom: 50px;
     width: 97%;
     padding: 20px;
+}
+
+.submit-comparision{
+    position: absolute;
+    outline: none;
+    border: none;
+    margin: auto;
+    width: 60%;
+    padding: 0.5em 0.5em;
+    font-size: 2vw;
+    margin: 0.8rem 0.8rem;
+    background: #ff0043;
+    color: whitesmoke;
+    text-align: center;
+    left: 20%;
+}
+
+.submit-comparision:hover{
+    background: whitesmoke;
+    color: #111;
 }
 
 .heading-comp{
@@ -89,3 +154,16 @@
 option:hover {
     background-color: #488f8f; 
   } 
+
+
+@media screen and (max-width: 1200px){
+    .player-1 {
+        display: inline-block;
+    }
+    .player-2 {
+        display: inline-block;
+    }
+    .submit-comparision {
+        display: inline-block;
+    }
+}

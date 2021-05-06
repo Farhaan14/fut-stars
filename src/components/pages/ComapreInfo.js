@@ -8,9 +8,15 @@ Chart.register(...registerables);
 class CompareInfo extends React.Component{
 
     componentDidUpdate(){
+
         var type_chart = 'radar';
-        if(localStorage.getItem('selected-chart') == 'shots'){
-            var labels = [
+        var labels;
+        var data1;
+        var data2;
+        var caption;
+    
+        if(localStorage.getItem('selected-chart') === 'shots'){
+            labels = [
                 'Positioning',
                 'Finishing',
                 'Shot Power',
@@ -19,7 +25,7 @@ class CompareInfo extends React.Component{
                 'Penalties'
             ];
 
-            var data1 = [
+            data1 = [
                 Footballers[localStorage.getItem("id1")].positioning,
                 Footballers[localStorage.getItem("id1")].finishing,
                 Footballers[localStorage.getItem("id1")].shot_power,
@@ -28,7 +34,7 @@ class CompareInfo extends React.Component{
                 Footballers[localStorage.getItem("id1")].penalties
             ];
 
-            var data2 = [
+            data2 = [
                 Footballers[localStorage.getItem("id2")].positioning,
                 Footballers[localStorage.getItem("id2")].finishing,
                 Footballers[localStorage.getItem("id2")].shot_power,
@@ -37,11 +43,11 @@ class CompareInfo extends React.Component{
                 Footballers[localStorage.getItem("id2")].penalties
             ];
 
-            var caption = 'Shots';
+            caption = 'Shots';
         }
 
-        else if(localStorage.getItem('selected-chart') == 'passing'){
-            var labels = [
+        else if(localStorage.getItem('selected-chart') === 'passing'){
+            labels = [
                 'Vision',
                 'Crossing',
                 'Free Kick',
@@ -50,7 +56,7 @@ class CompareInfo extends React.Component{
                 'Curve'
             ];
 
-            var data1 = [
+            data1 = [
                 Footballers[localStorage.getItem("id1")].vision,
                 Footballers[localStorage.getItem("id1")].crossing,
                 Footballers[localStorage.getItem("id1")].freekick,
@@ -59,7 +65,7 @@ class CompareInfo extends React.Component{
                 Footballers[localStorage.getItem("id1")].curve
             ];
 
-            var data2 = [
+            data2 = [
                 Footballers[localStorage.getItem("id2")].vision,
                 Footballers[localStorage.getItem("id2")].crossing,
                 Footballers[localStorage.getItem("id2")].freekick,
@@ -68,11 +74,11 @@ class CompareInfo extends React.Component{
                 Footballers[localStorage.getItem("id2")].curve
             ];
 
-            var caption = 'Passing';
+            caption = 'Passing';
         }
 
-        else if(localStorage.getItem('selected-chart') == 'dribbles'){
-            var labels = [
+        else if(localStorage.getItem('selected-chart') === 'dribbles'){
+            labels = [
                 'Agility',
                 'Balance',
                 'Reactions',
@@ -81,7 +87,7 @@ class CompareInfo extends React.Component{
                 'Composure'
             ];
 
-            var data1 = [
+            data1 = [
                 Footballers[localStorage.getItem("id1")].agility,
                 Footballers[localStorage.getItem("id1")].balance,
                 Footballers[localStorage.getItem("id1")].reactions,
@@ -90,7 +96,7 @@ class CompareInfo extends React.Component{
                 Footballers[localStorage.getItem("id1")].composure
             ];
 
-            var data2 = [
+            data2 = [
                 Footballers[localStorage.getItem("id2")].agility,
                 Footballers[localStorage.getItem("id2")].balance,
                 Footballers[localStorage.getItem("id2")].reactions,
@@ -99,11 +105,11 @@ class CompareInfo extends React.Component{
                 Footballers[localStorage.getItem("id2")].composure
             ];
 
-            var caption = 'Dribbles';
+            caption = 'Dribbles';
         }
 
-        else if(localStorage.getItem('selected-chart') == 'defending'){
-            var labels = [
+        else if(localStorage.getItem('selected-chart') === 'defending'){
+            labels = [
                 'Interceptions',
                 'Heading',
                 'Awarness',
@@ -111,7 +117,7 @@ class CompareInfo extends React.Component{
                 'Slide Tackle'
             ];
 
-            var data1 = [
+            data1 = [
                 Footballers[localStorage.getItem("id1")].interceptions,
                 Footballers[localStorage.getItem("id1")].heading,
                 Footballers[localStorage.getItem("id1")].awareness,
@@ -119,7 +125,7 @@ class CompareInfo extends React.Component{
                 Footballers[localStorage.getItem("id1")].slide_tackle
             ];
 
-            var data2 = [
+            data2 = [
                 Footballers[localStorage.getItem("id2")].interceptions,
                 Footballers[localStorage.getItem("id2")].heading,
                 Footballers[localStorage.getItem("id2")].awareness,
@@ -127,36 +133,36 @@ class CompareInfo extends React.Component{
                 Footballers[localStorage.getItem("id2")].slide_tackle
             ];
 
-            var caption = 'Defending';
+            caption = 'Defending';
         }
 
-        else if(localStorage.getItem('selected-chart') == 'physical'){
-            var labels = [
+        else if(localStorage.getItem('selected-chart') === 'physical'){
+            labels = [
                 'Jumping',
                 'Stamina',
                 'Strength',
                 'Aggresion'
             ];
 
-            var data1 = [
+            data1 = [
                 Footballers[localStorage.getItem("id1")].jumping,
                 Footballers[localStorage.getItem("id1")].stamina,
                 Footballers[localStorage.getItem("id1")].strength,
                 Footballers[localStorage.getItem("id1")].aggression
             ];
 
-            var data2 = [
+            data2 = [
                 Footballers[localStorage.getItem("id2")].jumping,
                 Footballers[localStorage.getItem("id2")].stamina,
                 Footballers[localStorage.getItem("id2")].strength,
                 Footballers[localStorage.getItem("id2")].aggression
             ];
 
-            var caption = 'Physical';
+            caption = 'Physical';
         }
 
-        else if(localStorage.getItem('selected-chart') == 'goalkeeper'){
-            var labels = [
+        else if(localStorage.getItem('selected-chart') === 'goalkeeper'){
+            labels = [
                 'Diving',
                 'Handling',
                 'Kicking',
@@ -165,7 +171,7 @@ class CompareInfo extends React.Component{
                 'Positioning'
             ];
 
-            var data1 = [
+            data1 = [
                 Footballers[localStorage.getItem("id1")].diving,
                 Footballers[localStorage.getItem("id1")].handling,
                 Footballers[localStorage.getItem("id1")].kicking,
@@ -174,7 +180,7 @@ class CompareInfo extends React.Component{
                 Footballers[localStorage.getItem("id1")].pos
             ];
 
-            var data2 = [
+            data2 = [
                 Footballers[localStorage.getItem("id2")].diving,
                 Footballers[localStorage.getItem("id2")].handling,
                 Footballers[localStorage.getItem("id2")].kicking,
@@ -183,28 +189,28 @@ class CompareInfo extends React.Component{
                 Footballers[localStorage.getItem("id2")].pos
             ];
 
-            var caption = 'GK';
+            caption = 'GK';
         }
 
         else{
             type_chart = 'bar';
 
-            var labels = [
+            labels = [
                 'Acceleration',
                 'Sprint Speed'
             ];
         
-            var data1 = [
+            data1 = [
                 Footballers[localStorage.getItem("id1")].acceleration,
                 Footballers[localStorage.getItem("id1")].sprint_speed
             ];
         
-            var data2 = [
+            data2 = [
                 Footballers[localStorage.getItem("id2")].acceleration,
                 Footballers[localStorage.getItem("id2")].sprint_speed
             ];
         
-            var caption = 'Pace';
+            caption = 'Pace';
 
         }
 

@@ -14,8 +14,8 @@ const handleClick2 = (e) => {
 class Comparision extends React.Component{
 
     componentDidMount(){
-        localStorage.setItem('id1', -1);
-        localStorage.setItem('id2', -1);
+        localStorage.setItem('id1', 0);
+        localStorage.setItem('id2', 0);
     }
     
     render(){
@@ -41,7 +41,7 @@ class Comparision extends React.Component{
                 })}
             </div>
             <Link to='/CompareInfo'>
-                <button>Submit</button>
+                <button className="submit-comparision">Submit</button>
             </Link>  
         </>
         )
