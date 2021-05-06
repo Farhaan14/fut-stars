@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.player-container-compare {
+    margin: auto;
+    width: 90%;
+    height: 80vh;
+    background-color: red;
+    overflow-y: scroll;
+}
+
+.player-1{
+    background-color: aqua;
+}
+
+.player-2{
+    background-color: blueviolet;
+    float: right;
+}
+
+.players-info{
+    margin: auto;
+    background-color: #222;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 97%;
+    padding: 20px;
+}
+
+.heading-comp{
+    margin:auto;
+    margin-top: 2%;
+    width: 95%;
+    height: 75%;
+    padding: 20px;
+    background-color: black;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    background: url('../images/bg5.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    
+}
+
+.item-3{
+    display: grid;
+}
+
+.item-4{
+    display: grid;
+    justify-items: right;
+}
+
+.chart-cont{
+    width: 40vw;
+    margin: auto;
+}

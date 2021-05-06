@@ -1,6 +1,7 @@
 import React from 'react';
 import {Footballers} from '../../dataset/data'
 import {Link} from 'react-router-dom';
+import './compare.css';
 
 const handleClick1 = (e) => {
     localStorage.setItem('id1', e.target.id);
@@ -11,11 +12,16 @@ const handleClick2 = (e) => {
   }
 
 class Comparision extends React.Component{
+
+    componentDidMount(){
+        localStorage.setItem('id1', -1);
+        localStorage.setItem('id2', -1);
+    }
     
     render(){
         return (
         <>
-            <div className="player-container">
+            <div className="player-container-compare">
                 {    
                 Footballers.map((data) => {
                     

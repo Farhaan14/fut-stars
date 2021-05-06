@@ -80,10 +80,16 @@ font-family: 'Work Sans', sans-serif;*/
     .name{
       color: whitesmoke;
       font-size: 2.8vw;
-
-
       /* width: 65%; */
       
+    }
+
+    .comp-1-1, .comp-2-1{
+      font-size: 1.8vw;
+    }
+
+    .comp-2-1{
+      text-align: right;
     }
 
     .name-1{
@@ -99,6 +105,14 @@ font-family: 'Work Sans', sans-serif;*/
       font-size: 8vw;
       letter-spacing: 0.5vw;
       /* top: calc(50% - 6vw); */
+    }
+
+    .comp-1-2, .comp-2-2{
+      font-size: 5vw;
+    }
+
+    .comp-2-2{
+      text-align: right;
     }
 
     .heading{
