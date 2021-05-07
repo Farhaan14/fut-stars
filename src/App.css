@@ -205,7 +205,17 @@ footer {
 
 .footer-p{
     color: #999;
+    padding-bottom: 0.3rem;
 }
+
+.footer-p a:link{
+    color: #999;
+}
+
+a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+  }
 
 .sci{
     margin-top: 20px;

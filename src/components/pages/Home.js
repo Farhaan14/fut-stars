@@ -31,20 +31,20 @@ export default function Home() {
                   <h3 className="footer-h3">About Us</h3>
                   <p className="footer-p">Ad irure minim cillum eiusmod ex cillum eiusmod ut tempor non magna amet ullamco reprehenderit. Est pariatur laboris do cillum ut in ad fugiat. Excepteur aute excepteur mollit voluptate dolore esse sit. Nostrud est sunt cupidatat culpa velit occaecat cillum occaecat eu tempor laborum culpa exercitation.</p>
                   <ul class="sci">
-                  <li><i class="fab fa-github" aria-hidden="true"></i></li>
+                  <li><a  href="https://github.com/Fut-Stars/fut-stars"><i class="fab fa-github" aria-hidden="true"></i> </a></li>
                 </ul>
                 </div>
                 <div className="sec contact">
                   <h3 className="footer-h3">Contact</h3>
                   <ul className="info">
                     <li>
-                      <p className="footer-p">email id1</p>
+                      <p className="footer-p"><a href="https://github.com/Dimish18">Dimish18</a></p>
                     </li>
                     <li>
-                      <p className="footer-p">email id2</p>
+                      <p className="footer-p"><a href="https://github.com/Farhaan14">Farhaan14</a></p>
                     </li>
                     <li>
-                      <p className="footer-p">email id3</p>
+                      <p className="footer-p"><a href="https://github.com/VTPrince">VTPrince</a></p>
                     </li>
                   </ul>
                 </div>
