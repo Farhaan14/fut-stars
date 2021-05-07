@@ -5,10 +5,38 @@ import './compare.css';
 
 const handleClick1 = (e) => {
     localStorage.setItem('id1', e.target.id);
+    
+    var all = document.getElementsByClassName('player-1');
+    for (var i = 0; i < all.length; i++) {
+        all[i].style.backgroundColor = '#222';
+        all[i].onmouseover = function() {
+            this.style.backgroundColor = "#FF0043";
+        }
+        all[i].onmouseout = function() {
+            this.style.backgroundColor = "#222";
+            all[e.target.id].style.backgroundColor = "#FF0043";
+        }
+        
+    }
+
+    
   }
 
 const handleClick2 = (e) => {
     localStorage.setItem('id2', e.target.id);
+    
+    var all = document.getElementsByClassName('player-2');
+    for (var i = 0; i < all.length; i++) {
+        all[i].style.backgroundColor = '#222';
+        all[i].onmouseover = function() {
+            this.style.backgroundColor = "#FF0043";
+        }
+        all[i].onmouseout = function() {
+            this.style.backgroundColor = "#222";
+            all[e.target.id].style.backgroundColor = "#FF0043";
+        }
+        
+    }
   }
 
 class Comparision extends React.Component{
