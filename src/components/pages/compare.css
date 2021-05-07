@@ -166,4 +166,13 @@ option:hover {
     .submit-comparision {
         display: inline-block;
     }
+    .chart-cont{
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .chart-cont{
+        width: 80vw;
+    }
 }
