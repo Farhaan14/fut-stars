@@ -2,9 +2,10 @@ import React, {useState, useEffect} from "react";
 import fire from '../pages/fire';
 import Login from './Login';
 import '../pages/Login.css';
-import Home from '../pages/Home';
+import Hero from '../pages/Hero';
+import Navbar from "../Navbar";
 
-const LoginMain = () => {
+const Logout = () => {
     const [user, setUser] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -66,6 +67,9 @@ const LoginMain = () => {
         })
     }
 
+const handleLogOut = () => {
+        fire.auth().signOut();
+    }
 
 const authListener = () => {
 fire.auth().onAuthStateChanged((user) => {
@@ -84,10 +88,12 @@ useEffect(() =>{
 }, []);
 
 return (
+    <>
+    <Navbar />
     <div className="LoginMain">
       {user ? (
-        // <Hero handleLogOut={handleLogOut} />
-        <Home />
+        <Hero handleLogOut={handleLogOut} />
+        
       ) : (
         <Login
         email={email}
@@ -107,9 +113,11 @@ return (
         
         
     </div>
+    </>
 )
+
 
 
   }
 
-  export default LoginMain;
+  export default Logout;

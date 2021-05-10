@@ -14,6 +14,7 @@ import Players from './components/pages/Players';
 import Info from './components/pages/Info';
 import CompareInfo from './components/pages/ComapreInfo';
 import LoginMain from './components/pages/LoginMain';
+import Logout from './components/pages/Logout';
 
 
 
@@ -34,12 +35,10 @@ function App() {
         <Route path='/Players' exact component={Players} />
         <Route path='/Info' exact component={Info} />
         <Route path='/CompareInfo' exact component={CompareInfo} />
+        <Route path='/Logout' exact component={Logout} />
       </Switch>
     </Router>
   );
 }
-
-
-
 
 export default App;

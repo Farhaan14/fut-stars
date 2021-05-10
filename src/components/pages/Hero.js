@@ -1,17 +1,17 @@
 import React from 'react';
-import Navbar from '../Navbar';
+import {Link} from 'react-router-dom';
 
 const Hero = ({handleLogOut}) => {
 return (
-    <>
-    <Navbar />
     <section className="hero">
         <nav>
-            <h2>Logout</h2>
-            <button onClick={handleLogOut}>LogOut</button>
+            <h2>Welcome</h2>
+            <Link to='/' onClick={handleLogOut}>
+                <button>LogOut</button>
+            </Link>
+            
         </nav>
     </section>
-    </>
 )
 }
 
