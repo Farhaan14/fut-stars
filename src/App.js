@@ -14,6 +14,8 @@ import Logout from './components/pages/Logout';
 import Players from './components/pages/Players';
 import Info from './components/pages/Info';
 import CompareInfo from './components/pages/ComapreInfo';
+import LoginMain from './components/pages/LoginMain';
+
 
 
 function App() {
@@ -21,7 +23,8 @@ function App() {
     <Router>
       <Navbar />
       <Switch>
-        <Route path='/' exact component={Home} />
+        <Route path='/' exact component={LoginMain} />
+        <Route path='/Home' exact component={Home} />
         <Route path='/Forward' exact component={Forward} />
         <Route path='/MidFielder' exact component={MidFielder} />
         <Route path='/Defender' exact component={Defender} />
@@ -38,5 +41,7 @@ function App() {
   );
 }
 
-export default App;
 
+
+
+export default App;

@@ -30,7 +30,7 @@ function Navbar() {
         <>
             <nav className='navbar'>
                 <img src={logo} className="logo-rooney" alt="logo"/>
-                <Link to='/' className='navbar-logo'>
+                <Link to='/Home' className='navbar-logo'>
                     Fut Stars
                 </Link>
                 <div className='menu-icon' onClick={handleClick}>
@@ -39,7 +39,7 @@ function Navbar() {
                 <div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='nav-item'>
-                            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                            <Link to='/Home' className='nav-links' onClick={closeMobileMenu}>
                                 Home
                             </Link>
                         </li>
@@ -68,7 +68,7 @@ function Navbar() {
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/Logout' className='nav-links' onClick={closeMobileMenu}>
+                            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                                 Logout
                             </Link>
                         </li>
