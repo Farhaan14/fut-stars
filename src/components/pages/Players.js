@@ -1,10 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import './player.css'
+import Navbar from '../Navbar';
 
 export default function Players(){
     return(
         <>
+            <Navbar />
             <h4 className="page-heading players">Players</h4>
             <ul className="player-types">
             <Link to='/Forward' className='player-links'>

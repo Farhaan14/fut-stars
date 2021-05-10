@@ -1,8 +1,9 @@
 import React from 'react';
 import {Footballers} from '../../dataset/data'
 import {Link} from 'react-router-dom';
-import './mid.scss'
-import './newcard.scss'
+import Navbar from '../Navbar';
+import './mid.scss';
+import './newcard.scss';
 
 const handleClick = (e) => {
     localStorage.setItem('id', e.currentTarget.id);
@@ -15,6 +16,8 @@ export default class Defender extends React.Component{
         
 
     return(
+		<>
+		<Navbar />
 
         <div className="page">
         
@@ -97,6 +100,7 @@ export default class Defender extends React.Component{
             </div>
         </div>
         
+		</>
             
     )
             }

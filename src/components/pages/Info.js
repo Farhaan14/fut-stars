@@ -1,6 +1,7 @@
 import React from 'react';
 import {Footballers} from '../../dataset/data'
 import './info.css';
+import Navbar from '../Navbar';
 
   
 class Info extends React.Component{
@@ -91,6 +92,7 @@ class Info extends React.Component{
     render(){
     return(
         <>
+        <Navbar />
         <div className="info-page">
             <div className="main-info">
             <div className="heading">

@@ -5,10 +5,12 @@ import united from '../images/home_teams/united.png'
 import city from '../images/home_teams/city.png'
 import psg from '../images/home_teams/psg.png'
 import ball from '../images/ball.png'
+import Navbar from '../Navbar';
 
 export default function Home() {
   return (
     <>
+          <Navbar />
           <div className='home'>
             <h1>CHOOSE YOUR HEROES FROM THE FIELD</h1>
             <h2>Draft them and go head to head against the best</h2>

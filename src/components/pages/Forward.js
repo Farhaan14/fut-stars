@@ -3,6 +3,7 @@ import {Footballers} from '../../dataset/data'
 import {Link} from 'react-router-dom';
 import './mid.scss'
 import './newcard.scss'
+import Navbar from '../Navbar';
 
 const handleClick = (e) => {
     localStorage.setItem('id', e.currentTarget.id);
@@ -15,6 +16,8 @@ export default class Forward extends React.Component{
         
 
     return(
+		<>
+		<Navbar />
 
         <div className="page">
         
@@ -95,7 +98,7 @@ export default class Forward extends React.Component{
             </div>
         </div>
         
-            
+       </>     
     )
             }
 }

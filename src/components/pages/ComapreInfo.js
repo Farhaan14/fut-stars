@@ -1,6 +1,7 @@
 import React from 'react';
 import {Footballers} from '../../dataset/data';
 import './compare.css';
+import Navbar from '../Navbar';
 import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
 
@@ -301,6 +302,7 @@ class CompareInfo extends React.Component{
     render(){
     return(
         <>
+            <Navbar />
             <div className="players-info">
                 <div className="heading-comp">
                     <div className="item-1">
