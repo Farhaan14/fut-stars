@@ -16,6 +16,15 @@
     background: #603bbb;
     cursor: pointer;
   }
+
+  @media screen and (max-width: 1200px){
+    .sign {
+        display: block;
+    }
+    .return-to-signin {
+      display: block;
+    }
+  }
   
   .login {
     width: 100%;

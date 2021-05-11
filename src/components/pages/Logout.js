@@ -11,7 +11,7 @@ class Logout extends React.Component {
     return(
       <>
         <Link to='/'>
-                <button>Return to SignIn Page</button>
+                <button className="return-to-signin">Return to SignIn Page</button>
         </Link>
       </>
     );

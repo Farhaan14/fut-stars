@@ -84,9 +84,9 @@ useEffect(() =>{
 }, []);
 
 return (
+    
     <div className="LoginMain">
       {user ? (
-        // <Hero handleLogOut={handleLogOut} />
         <Home />
       ) : (
         <Login
