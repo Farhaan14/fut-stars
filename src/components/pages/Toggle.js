@@ -36,7 +36,7 @@ class Toggle extends React.Component {
         usersRef.get()
         .then((docSnapshot) => {
             if (docSnapshot.exists) {
-                this.setState({ isChecked: !this.state.isChecked });
+                // this.setState({ isChecked: !this.state.isChecked });
                 document.getElementById("checkbox").checked = true;
             }
         });
