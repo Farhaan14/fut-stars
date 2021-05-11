@@ -2,6 +2,8 @@ import React from 'react';
 import {Footballers} from '../../dataset/data'
 import './info.css';
 import Navbar from '../Navbar';
+import firebase from 'firebase';
+import Toggle from './Toggle';
 
   
 class Info extends React.Component{
@@ -9,6 +11,12 @@ class Info extends React.Component{
     componentDidMount (){
 
         window.scrollTo(0,0); 
+
+        var user = firebase.auth().currentUser;
+
+        if (user != null) {
+            localStorage.setItem("uid", user.uid);
+        }
 
         var i;
 
@@ -94,7 +102,9 @@ class Info extends React.Component{
         <>
         <Navbar />
         <div className="info-page">
+            
             <div className="main-info">
+            <Toggle isChecked />
             <div className="heading">
             <div className="column-cont column-cont-2">
                 <h3 className="name name-1" id="name-1">{Footballers[localStorage.getItem("id")].name.split(" ")[0]}</h3>
@@ -163,7 +173,6 @@ class Info extends React.Component{
                 </div>
                 <div className="column">
                     <div className="card">
-                        {/* <span class="fa fa-star checked work-rate">{Footballers[localStorage.getItem("id")].workrate}</span> */}
                         <h4 className="workrate">{Footballers[localStorage.getItem("id")].workrate}</h4>
                         <h4 className="attr star-title">Work Rate</h4>
                     </div>

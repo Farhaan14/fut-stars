@@ -1,8 +1,8 @@
 import React from 'react';
 import Navbar from '../Navbar';
-import firebase from 'firebase';
-import 'firebase/storage';
-import 'firebase/firestore';
+// import firebase from 'firebase';
+// import 'firebase/storage';
+// import 'firebase/firestore';
 
 
 class Wishlist extends React.Component{

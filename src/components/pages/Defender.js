@@ -62,7 +62,7 @@ export default class Defender extends React.Component{
 										<div className="player-card-bottom">
 											<div className="player-info">
                                            
-												<div class="player-name"><span>{data.name}</span></div>
+												<div className="player-name"><span>{data.name}</span></div>
 												
                                                 <div className="player-features">
 													<div style={{'paddingLeft':'20'}} className="player-features-col"><span>
