@@ -1,5 +1,5 @@
 import React from 'react';
-import './Toggle.css';
+import './toggle.css';
 import firebase from 'firebase';
 
 
