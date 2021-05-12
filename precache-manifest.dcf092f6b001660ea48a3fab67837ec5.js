@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "71702ba610a14f8057ac",
-    "url": "/fut-stars/static/css/main.4ce57b84.chunk.css"
+    "revision": "ee0484ae9bf9e2a9f4ed",
+    "url": "/fut-stars/static/css/main.63cf1bab.chunk.css"
   },
   {
-    "revision": "71702ba610a14f8057ac",
-    "url": "/fut-stars/static/js/main.18d18690.chunk.js"
+    "revision": "ee0484ae9bf9e2a9f4ed",
+    "url": "/fut-stars/static/js/main.e2d69451.chunk.js"
   },
   {
     "revision": "255a5ddcaacac1a014d8",
@@ -52,7 +52,7 @@ self.__precacheManifest = [
     "url": "/fut-stars/static/media/icon3.34426a43.png"
   },
   {
-    "revision": "2b7f4695f8db2799678dda23c74a39b5",
+    "revision": "c7e9c7dfb53606e4b202ab7866244eda",
     "url": "/fut-stars/index.html"
   }
 ];
