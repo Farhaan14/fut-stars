@@ -1,0 +1,88 @@
+.thank-you, .thank-you-text{
+    all:unset;
+}
+
+.logout-cont{
+    margin: 0;
+    width: 70%;
+    padding: 1em;
+    position: absolute;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    text-align:center;
+    font-size: 4rem;
+    color: whitesmoke;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.thank-you{
+    text-transform: uppercase;
+    font-family: 'Work Sans', sans-serif;
+    width: 100%;
+
+}
+
+.thank-you-text{
+    font-size: 2rem; 
+    padding: 0.4em;
+}
+
+.fut-stars{
+    color: #ff0043;
+}
+
+
+.logout-link{
+    cursor: auto;
+}
+
+.return-to-signin{
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    padding: 1em;
+    /* margin-bottom: auto; */
+    cursor: pointer;
+    background-color: whitesmoke;
+    color: #111;
+}
+
+.return-to-signin:hover{
+    background-color: #ff0043;
+    color: white;
+}
+
+@media screen and (max-width: 785px){
+    .thank-you{
+        font-size: 2rem;
+    }
+
+    .thank-you-text{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .thank-you{
+        font-size: 1.8rem;
+    }
+
+    .thank-you-text{
+        font-size: 0.7rem;
+    }
+
+    .return-to-signin{
+        font-size: 0.7rem;
+    }
+}

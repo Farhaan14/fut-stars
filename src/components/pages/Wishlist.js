@@ -12,7 +12,7 @@ const handleClick = (e) => {
 }
 
 class Wishlist extends React.Component{
-    
+
     render(){
 
         var user = firebase.auth().currentUser;

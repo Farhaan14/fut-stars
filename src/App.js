@@ -24,6 +24,7 @@ import fire from './components/pages/fire';
 class App extends React.Component {
   componentDidMount(){
     fire.auth().signOut();
+    console.clear();
   }
   render(){
   return (
