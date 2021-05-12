@@ -16,10 +16,16 @@ import Info from './components/pages/Info';
 import CompareInfo from './components/pages/ComapreInfo';
 import LoginMain from './components/pages/LoginMain';
 import Logout from './components/pages/Logout';
+import fire from './components/pages/fire';
 
 
 
-function App() {
+
+class App extends React.Component {
+  componentDidMount(){
+    fire.auth().signOut();
+  }
+  render(){
   return (
     <Router>
       {/* <Navbar /> */}
@@ -40,6 +46,7 @@ function App() {
       </Switch>
     </Router>
   );
+  }
 }
 
 export default App;

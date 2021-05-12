@@ -8,6 +8,17 @@ Chart.register(...registerables);
 
 class CompareInfo extends React.Component{
 
+    componentDidMount(){
+        if(Footballers[localStorage.getItem("id1")].name.split(" ")[1] == null){
+            document.getElementById("name-1").classList.add("name-2");
+            document.getElementById("name-1").classList.add("small");
+        }
+        if(Footballers[localStorage.getItem("id2")].name.split(" ")[1] == null){
+            document.getElementById("name-2").classList.add("name-2");
+            document.getElementById("name-2").classList.add("small");
+        }
+    }
+
     componentDidUpdate(){
 
         var type_chart = 'radar';
@@ -312,7 +323,7 @@ class CompareInfo extends React.Component{
                         </div>
                     </div>
                     <div className="item-2">
-                        <h3 className="name name-1 comp-2-1" id="name-1">{Footballers[localStorage.getItem("id2")].name.split(" ")[0]}</h3>
+                        <h3 className="name name-1 comp-2-1" id="name-2">{Footballers[localStorage.getItem("id2")].name.split(" ")[0]}</h3>
                         <div className="name-2-cont">
                             <h3 className="name name-2 comp-2-2 small">{Footballers[localStorage.getItem("id2")].name.split(" ")[1]} {Footballers[localStorage.getItem("id2")].name.split(" ")[2]}</h3>
                         </div>
