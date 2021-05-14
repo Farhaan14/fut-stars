@@ -1,0 +1,80 @@
+.aboutus-title {
+    position: relative;
+    font-size: 8rem;
+    padding-top: 2rem;
+}
+
+.about-cont{
+    margin: 0;
+    width: 70%;
+    padding: 1em;
+    position: relative;
+    
+    margin-top: 10rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    text-align:center;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    background-color: #222;
+    display: flex;
+    /* flex-direction: column; */
+    
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-basis: 100%;
+
+    gap: 1em;
+
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr; */
+}
+
+.about-content{
+    width: 50%;
+}
+
+.github-cont{
+    background-color: #FF0043;
+    padding: 1em;
+    width: 50%;
+    font-size: 1.3rem;
+}
+
+
+@media screen and (max-width: 1000px){
+    .about-cont{
+        font-size: 1.3rem;
+    }
+    .github-cont{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .about-cont{
+        flex-direction: column;
+    }
+    .about-content{
+        height: 50%;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .github-cont{
+        height: 50%;
+        width: 100%;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 660px){
+    .about-cont{
+        font-size: 1.1rem;
+    }
+}
