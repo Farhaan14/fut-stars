@@ -106,7 +106,7 @@ class Wishlist extends React.Component{
             <>
                 <Navbar />
                 <h4 className="page-heading wishlist-title">Wishlist</h4>
-                <div id="wishlist-list" className="wishlist-list">Wishlist is empty !</div>
+                <div id="wishlist-list" className="wishlist-list"><span className="empty-wishlist">Wishlist is empty !</span></div>
             </>
         )
     }

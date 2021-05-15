@@ -5,76 +5,44 @@
 }
 
 .about-cont{
-    margin: 0;
-    width: 70%;
-    padding: 1em;
-    position: relative;
-    
-    margin-top: 10rem;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-    text-align:center;
-    font-size: 1.5rem;
-    color: whitesmoke;
-    background-color: #222;
+    all: unset;
     display: flex;
-    /* flex-direction: column; */
-    
-
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-
-    align-items: center;
+    align-content: center;
     justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    word-wrap: break-word;
+    color: white;
+    gap: 2em;
+    font-size: 1rem;
+    background-color: #222;
+    padding: 2em;
+    line-height: 1.5;
+}
 
+.about-cont > *{
     flex-basis: 100%;
-
-    gap: 1em;
-
-    /* display: grid; */
-    /* grid-template-columns: 1fr 1fr; */
 }
 
 .about-content{
-    width: 50%;
+    /* padding: 2em; */
+    text-align: left;
 }
 
-.github-cont{
-    background-color: #FF0043;
-    padding: 1em;
-    width: 50%;
-    font-size: 1.3rem;
+.github-cont {
+    padding: 2em;
+    background-color: #ff0043;
+    outline: 2px solid white;
+    outline-offset: -10px;
+    /* margin: auto; */
 }
 
 
-@media screen and (max-width: 1000px){
-    .about-cont{
-        font-size: 1.3rem;
-    }
-    .github-cont{
-        font-size: 0.9rem;
-    }
-}
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 1200px) {
     .about-cont{
         flex-direction: column;
-    }
-    .about-content{
-        height: 50%;
-        width: 100%;
-        margin-top: 1rem;
-    }
-    .github-cont{
-        height: 50%;
-        width: 100%;
-        font-size: 1.2rem;
-    }
-}
-
-@media screen and (max-width: 660px){
-    .about-cont{
-        font-size: 1.1rem;
     }
 }

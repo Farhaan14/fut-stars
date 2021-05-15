@@ -29,10 +29,9 @@ clubs to glory makes teams compete over talent.
                     )
                     }
                 </div>
-                <h3 id="h3"> </h3>
-                <br />
+                 
                 <label>Username</label>
-                <br />
+                 
                 <input
                 type="text"
                 autoFocus
@@ -41,9 +40,9 @@ clubs to glory makes teams compete over talent.
                 />
 
                 <p className="errorMsg">{emailError}</p>
-                <br />
+                 
                 <label>Password</label>
-                <br />
+                 
                 <input
                 type="password"
                 required
@@ -53,14 +52,14 @@ clubs to glory makes teams compete over talent.
                 
                 <p className="errorMsg">{passwordError}</p>
                 
-                <div className="btnContainer">
+                {/* <div className="btnContainer"> */}
                     {hasAccount ? (
                         <>
-                            <br />
+                             
                             <button onClick ={handleLogin} className="sign"> Sign In</button>
-                            <br />
-                            <p>Don't have an account ? <span onClick={() => setHasAccount(!hasAccount)} className="sign-in"> Sign Up</span></p>
-                            <br />
+                             
+                            <p className="switch">Don't have an account ? <span onClick={() => setHasAccount(!hasAccount)} className="sign-in"> Sign Up</span></p>
+                             
                             {/* <span style={{display: 'none'}}>
                             {document.getElementById("h3").innerHTML = "Sign In"}
                             </span> */}
@@ -70,11 +69,11 @@ clubs to glory makes teams compete over talent.
                     ) : (
 
                         <>
-                            <br />
+                             
                             <button onClick = {handleSignup} className="sign"> Sign Up</button>
-                            <br />
-                            <p> Have an account ? <span onClick ={() => setHasAccount(!hasAccount)} className="sign-in">Sign In</span></p>
-                            <br />
+                             
+                            <p className="switch"> Have an account ? <span onClick ={() => setHasAccount(!hasAccount)} className="sign-in">Sign In</span></p>
+                             
                             {/* <span style={{opacity: '0'}}> */}
                             {/* {document.getElementById("h3").innerHTML = "Sign Up"} */}
                             {/* </span> */}
@@ -83,7 +82,7 @@ clubs to glory makes teams compete over talent.
 
                     )}
 
-                </div>
+                {/* </div> */}
 
             </div>
 

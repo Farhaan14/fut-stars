@@ -1,3 +1,16 @@
+.wishlist-list{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    /* justify-content: center; */
+}
+
+.empty-wishlist{
+    color: white;
+    font-size: 2em;
+    
+}
+
 .wishlist-item{
     margin:auto;
     margin-top: 2%;
@@ -16,6 +29,7 @@
     background-size: cover;
     overflow: hidden;
     border: 5px solid #222;
+    text-align: left;
 }
 
 .item-5{
@@ -35,3 +49,5 @@
     font-size: 8rem;
     padding-top: 2rem;
 }
+
+

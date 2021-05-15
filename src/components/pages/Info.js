@@ -2,7 +2,6 @@ import React from 'react';
 import {Footballers} from '../../dataset/data'
 import './info.css';
 import Navbar from '../Navbar';
-import firebase from 'firebase';
 import Toggle from './Toggle';
 
   

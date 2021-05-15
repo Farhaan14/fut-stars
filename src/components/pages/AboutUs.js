@@ -7,10 +7,10 @@ export default function AboutUs(){
         <>
             <Navbar />
             <h4 className="page-heading aboutus-title">About Us</h4>
-            <div className="relative">
+
             <div className="about-cont">
                 <p className="about-content">
-                    Enim aute ipsum quis nulla cupidatat labore voluptate commodo. Ea adipisicing cillum qui nisi excepteur pariatur deserunt. Ipsum quis veniam laborum occaecat dolor non. Ea laborum aute ipsum mollit magna commodo minim est in eu irure esse aliquip.
+                Fut Stars provides the teams with an opportunity to infuse their squad with new talent. The players which would be drafted by their teams would provide an instant boost to them; while others might not. But the chance that drafted players will lead their new clubs to glory makes teams compete over talent.
                 </p>
                 <div className="github-cont">
                     <a href="https://github.com/Fut-Stars/fut-stars" className="github-link">Fut Stars</a><br />
@@ -19,7 +19,7 @@ export default function AboutUs(){
                     <a href="https://github.com/VTPrince" className="github-link">https://github.com/VTPrince</a><br />
                 </div>
             </div>
-            </div>
+
         </> 
     )
 }
