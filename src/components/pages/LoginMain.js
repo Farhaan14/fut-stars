@@ -72,6 +72,7 @@ fire.auth().onAuthStateChanged((user) => {
         if(user) {
             clearInputs();
             setUser(user);
+            localStorage.setItem("user_logged_in", user.uid);
         } else {
             setUser("");
         }

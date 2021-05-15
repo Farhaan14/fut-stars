@@ -6,9 +6,15 @@ import city from '../images/home_teams/city.png'
 import psg from '../images/home_teams/psg.png'
 import ball from '../images/ball.png'
 import Navbar from '../Navbar';
+import firebase from 'firebase';
 
-export default function Home() {
+export default class Home extends React.Component {
+  componentDidMount(){
+    
+  }
+  render(){
   return (
+    
     <>
           <Navbar />
           <div className='home'>
@@ -55,4 +61,5 @@ export default function Home() {
           </div>
     </>
   );
+  }
 }

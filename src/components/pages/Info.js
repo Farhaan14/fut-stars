@@ -12,11 +12,9 @@ class Info extends React.Component{
 
         window.scrollTo(0,0); 
 
-        var user = firebase.auth().currentUser;
+        // var user = localStorage.getItem("user_logged_in");
 
-        if (user != null) {
-            localStorage.setItem("uid", user.uid);
-        }
+        
 
         var i;
 

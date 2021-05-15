@@ -15,14 +15,14 @@ class Wishlist extends React.Component{
 
     render(){
 
-        var user = firebase.auth().currentUser;
+        var user = localStorage.getItem("user_logged_in");
         const projectFirestore = firebase.firestore();
 
         if (user != null) {
-            projectFirestore.collection(user.uid)
+            projectFirestore.collection(user)
             .get()
             .then(querySnapshot => {
-                const documents = querySnapshot.docs.map(doc => doc.data());
+                const documents = querySnapshot.docs.map((doc, index) => doc.data());
                 console.clear();
                 // console.log(documents);
                 // console.log(typeof(Object.values(documents)));
@@ -30,12 +30,14 @@ class Wishlist extends React.Component{
                 var i;
                 var div = document.getElementById("wishlist-list");
 
-                div.innerHTML = "";
+                if(documents.length > 0)
+                    div.innerHTML = "";
 
                 for(i=0; i<documents.length; i++){
 
                     var newDiv = document.createElement('div');
                     newDiv.className = "wishlist-item";
+                    newDiv.key = i;
 
                     var a = document.createElement('a');
                     a.href = "/Info";
@@ -104,7 +106,7 @@ class Wishlist extends React.Component{
             <>
                 <Navbar />
                 <h4 className="page-heading wishlist-title">Wishlist</h4>
-                <div id="wishlist-list" className="wishlist-list"></div>
+                <div id="wishlist-list" className="wishlist-list">Wishlist is empty !</div>
             </>
         )
     }

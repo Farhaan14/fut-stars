@@ -16,7 +16,7 @@ class Toggle extends React.Component {
 
         const projectFirestore = firebase.firestore();
         var playerID = localStorage.getItem("id");
-        var userID = localStorage.getItem("uid");
+        var userID = localStorage.getItem("user_logged_in");
         
         this.setState({ isChecked: !this.state.isChecked });
 
@@ -30,7 +30,7 @@ class Toggle extends React.Component {
     componentDidMount(){
         const projectFirestore = firebase.firestore();
         var playerID = localStorage.getItem("id");
-        var userID = localStorage.getItem("uid");
+        var userID = localStorage.getItem("user_logged_in");
         const usersRef = projectFirestore.collection(userID).doc(playerID)
 
         usersRef.get()
@@ -45,7 +45,7 @@ class Toggle extends React.Component {
     componentDidUpdate(){
         const projectFirestore = firebase.firestore();
         var playerID = localStorage.getItem("id");
-        var userID = localStorage.getItem("uid");
+        var userID = localStorage.getItem("user_logged_in");
         const usersRef = projectFirestore.collection(userID).doc(playerID)
 
         if(!document.getElementById("checkbox").checked){
