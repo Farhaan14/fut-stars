@@ -7,6 +7,11 @@
     padding:0;
     font-family: 'Oxygen', sans-serif;
     letter-spacing: 1px;
+    
+  }
+  .login-bg{
+    width: 100vw;
+    height: 100vh;
     background-image: url(../images/bg5.jpg);
     background-size:cover;
     background-repeat: no-repeat;
@@ -21,6 +26,7 @@
     background-color: #262626;
    
     position: relative;
+    
   }
   .container
   {
@@ -33,6 +39,7 @@
     height: 470px;
     /* background:rgba(103, 58, 183, 0.7); */
     background-color: rgba(34, 34, 34, 0.7);
+    
   }
   .container .form_content,
   .container .login-form
@@ -97,6 +104,7 @@
     border: 2px solid #ff0043;
     background: #ff0043;
     color: #fff;
+    cursor: pointer;
   }
   .sign-in{
     color: #222;

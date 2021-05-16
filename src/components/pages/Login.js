@@ -5,6 +5,7 @@ const Login = (props) => {
     const { email , setEmail, password, setPassword, handleLogin,  handleSignup, hasAccount, setHasAccount, emailError, passwordError} = props;
 
     return(
+        <div className="login-bg">
         <section className="container">
             <div class="form_content">
 
@@ -87,6 +88,7 @@ clubs to glory makes teams compete over talent.
             </div>
 
         </section>
+        </div>
     )
 }
 
