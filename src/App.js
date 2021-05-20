@@ -10,7 +10,7 @@ import Defender from './components/pages/Defender';
 import GoalKeeper from './components/pages/GoalKeeper';
 import Comparison from './components/pages/Comparison';
 import Wishlist from './components/pages/Wishlist';
-import AboutUs from './components/pages/AboutUs';
+import Recommendation from './components/pages/Recommendation';
 import Players from './components/pages/Players';
 import Info from './components/pages/Info';
 import CompareInfo from './components/pages/ComapreInfo';
@@ -18,7 +18,7 @@ import LoginMain from './components/pages/LoginMain';
 import Logout from './components/pages/Logout';
 import fire from './components/pages/fire';
 
-
+import List from './components/pages/List';
 
 
 class App extends React.Component {
@@ -39,11 +39,12 @@ class App extends React.Component {
         <Route path='/GoalKeeper' exact component={GoalKeeper} />
         <Route path='/Comparison' exact component={Comparison} />
         <Route path='/Wishlist' exact component={Wishlist} />
-        <Route path='/AboutUs' exact component={AboutUs} />
+        <Route path='/Recommendation' exact component={Recommendation} />
         <Route path='/Players' exact component={Players} />
         <Route path='/Info' exact component={Info} />
         <Route path='/CompareInfo' exact component={CompareInfo} />
         <Route path='/Logout' exact component={Logout} />
+        <Route path='/List' exact component={List} />
       </Switch>
     </Router>
   );

@@ -57,11 +57,11 @@ class Comparision extends React.Component{
                     
                     return(
                     <>
-                        <div key={data.id}>
+                        <div key={data.id + "main"}>
                             {
                                 <div className="player-button">
                                     <button key={data.id} id={data.id} onClick={handleClick1} className="player-1">{data.name}</button>
-                                    <button key={data.id} id={data.id} onClick={handleClick2} className="player-2">{data.name}</button> 
+                                    <button key={data.id + "_"} id={data.id} onClick={handleClick2} className="player-2">{data.name}</button> 
                                  </div>
                             }
                         </div>

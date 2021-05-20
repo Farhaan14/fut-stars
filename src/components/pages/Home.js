@@ -35,7 +35,7 @@ export default class Home extends React.Component {
               <div className="footer">
                 <div className="sec aboutus">
                   <h3 className="footer-h3">About Us</h3>
-                  <p className="footer-p">Ad irure minim cillum eiusmod ex cillum eiusmod ut tempor non magna amet ullamco reprehenderit. Est pariatur laboris do cillum ut in ad fugiat. Excepteur aute excepteur mollit voluptate dolore esse sit. Nostrud est sunt cupidatat culpa velit occaecat cillum occaecat eu tempor laborum culpa exercitation.</p>
+                  <p className="footer-p">Fut Stars provides the teams with an opportunity to infuse their squad with new talent. The players which would be drafted by their teams would provide an instant boost to them; while others might not. But the chance that drafted players will lead their new clubs to glory makes teams compete over talent.</p>
                   <ul className="sci">
                   <li><a  href="https://github.com/Fut-Stars/fut-stars"><i className="fab fa-github" aria-hidden="true"></i> </a></li>
                 </ul>

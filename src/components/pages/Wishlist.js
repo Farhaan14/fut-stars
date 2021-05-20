@@ -14,7 +14,6 @@ const handleClick = (e) => {
 class Wishlist extends React.Component{
 
     render(){
-
         var user = localStorage.getItem("user_logged_in");
         const projectFirestore = firebase.firestore();
 
@@ -23,7 +22,7 @@ class Wishlist extends React.Component{
             .get()
             .then(querySnapshot => {
                 const documents = querySnapshot.docs.map((doc, index) => doc.data());
-                console.clear();
+                // console.clear();
                 // console.log(documents);
                 // console.log(typeof(Object.values(documents)));
 
