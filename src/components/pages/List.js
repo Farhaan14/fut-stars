@@ -6,7 +6,7 @@ import {Footballers} from '../../dataset/data';
 import { Link } from 'react-router-dom';
 
 const handleClick = (e) => {
-    localStorage.setItem('id', e.target.id);
+    localStorage.setItem('id',  e.currentTarget.id);
   }
 
 const getSimilarity = (id1, id2) => {
@@ -97,12 +97,7 @@ const getSimilarity = (id1, id2) => {
         return s
 } 
 
-
-class List extends React.Component{
-
-    render(){
-
-        console.clear()
+const similarPlayers = () => {
         var id = parseInt(localStorage.getItem('idr'));
 
         var similarityScores = {};
@@ -129,13 +124,98 @@ class List extends React.Component{
             console.log(best[k][0])
 
         console.log(best)
+        return best;
+        
+}
+
+class List extends React.Component{
+
+    componentDidMount(){
+
+        window.scrollTo(0,0);
+        var best = similarPlayers();
+
+        var div = document.getElementById('r-list');
+        for(var i=0; i<10; i++){
+
+            var newDiv = document.createElement('div');
+            newDiv.className = "wishlist-item";
+            newDiv.key = i;
+
+            var a = document.createElement('a');
+            a.href = "/Info";
+
+            var item_1 = document.createElement('div');
+            item_1.className = "item-1";
+
+            var name_1 = document.createElement('div');
+            name_1.className = "name name-1 comp-1-1";
+            
+            var name_2 = document.createElement('div');
+            name_2.className = "name-2-cont";
+
+            var name_3 = document.createElement('div');
+            name_3.className = "name name-2 comp-1-2 small";
+
+            var item_2 = document.createElement('div');
+            item_2.className = "item-5";
+
+            var image = document.createElement('img');
+            image.className = "image player";
+            
+            var id = best[i][0];
+            var first = Footballers[id].name.split(" ")[0];
+            var second = Footballers[id].name.split(" ")[1];
+            var third = Footballers[id].name.split(" ")[2];
+            var img = Footballers[id].Image;
+
+            image.src = img;
+
+            if(third === undefined) {
+                if(second === undefined) {
+                    name_3.innerHTML = first;
+                } else {
+                    name_1.innerHTML = first;
+                    name_3.innerHTML = second;
+                }
+                
+            } else {
+                name_1.innerHTML = first;
+                name_3.innerHTML = second + third;
+            }
+
+            name_2.appendChild(name_3);
+
+            item_1.appendChild(name_1);
+            item_1.appendChild(name_2);
+            item_2.appendChild(image);
+
+            newDiv.appendChild(item_1);
+            newDiv.appendChild(item_2);
+
+            a.id = id;
+            newDiv.id = id;
+            newDiv.onclick = handleClick;
+            // a.onclick = handleClick;
+
+            a.appendChild(newDiv);
+            div.appendChild(a);
+            
+        }
+    }
+
+    render(){
+
+        
         
         return(
             <>
                 <Navbar />
-                <h4 className="page-heading wishlist-title">List</h4>
+                <h4 className="similar-heading">Similar Players to {Footballers[localStorage.getItem('idr')].name}</h4>
+                <div id="r-list" className="r-list"></div>
             </>
         )
+        
     }
 }
 

@@ -9,20 +9,6 @@ import { Link } from 'react-router-dom';
 const handleClick = (e) => {
     localStorage.setItem('idr', e.target.id);
     
-    // var all = document.getElementsByClassName('player-1');
-    // for (var i = 0; i < all.length; i++) {
-    //     all[i].style.backgroundColor = '#222';
-    //     all[i].onmouseover = function() {
-    //         this.style.backgroundColor = "#FF0043";
-    //     }
-    //     all[i].onmouseout = function() {
-    //         this.style.backgroundColor = "#222";
-    //         all[e.target.id].style.backgroundColor = "#FF0043";
-    //     }
-        
-    // }
-
-    
   }
 
 class Recommendation extends React.Component{

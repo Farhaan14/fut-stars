@@ -1,3 +1,11 @@
 .recommend-cont{
     margin-bottom: 5%;
 }
+
+.similar-heading{
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    padding: 2em;
+    text-transform: uppercase;
+}
